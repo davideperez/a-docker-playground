@@ -1,6 +1,19 @@
-# A Node App using a containerized Mongodb
+# A Docker Playground: NodeApp + Mongodb
 
 The goal of this app is to connect to a containerized MongoDB instance.
+
+# Table of Contents
+
+- [A Docker Playground: NodeApp + Mongodb](#a-docker-playground-nodeapp--mongodb)
+  - [Part 0: Node App](#part-0-node-app)
+  - [Part 1: Not automated Docker Container Network creation](#part-1-not-automated-docker-container-network-creation)
+    - [1. Create a docker network for the containers to communicate.](#1-create-a-docker-network-for-the-containers-to-communicate)
+    - [2. Create the mongo container](#2-create-the-mongo-container)
+    - [3. Update the connection route we are using to connect to mongo](#3-update-the-connection-route-we-are-using-to-connect-to-mongo)
+    - [4. Create a custom image with our node app using Dockerfile](#4-create-a-custom-image-with-our-node-app-using-dockerfile)
+    - [5. Create a container with our node app image](#5-create-a-container-with-our-node-app-image)
+  - [Part 2: Using Docker Compose](#part-2-using-docker-compose)
+  - [Part 3: Dockerfile.dev](#part-3-dockerfiledev)
 
 ## Part 0: Node App
 
@@ -38,10 +51,14 @@ docker start mongoContainer01
 ```
 
 ### 3. Update the connection route we are using to connect to mongo
+
+
 From localhost:
 ```bash
 mongoose.connect('mongodb://david:password@localhost:27017/miapp?authSource=admin')
 ```
+
+
 To mongoContainer01:
 ```bash
 mongoose.connect('mongodb://david:password@mongoContainer01:27017/miapp?authSource=admin')
