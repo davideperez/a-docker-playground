@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  mynodeapp:
+    build: .
+    ports:
+      - "3000:3000" 
+    links:
+      - mongoContainer01
+  mongoContainer01:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment: 
+      - MONGO_INITDB_ROOT_USERNAME=david 
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mongo-data:/data/db
+      # - mysql-data:/var/lib/mysql
+      # - postgres-data:/var/lib/postgresql/data
+volumes:
+  mongo-data:
