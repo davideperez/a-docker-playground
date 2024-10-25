@@ -5,17 +5,17 @@ The goal of this app is to connect to a containerized MongoDB instance.
 # Table of Contents
 
 - [A Docker Playground: NodeApp + Mongodb](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#a-docker-playground-nodeapp--mongodb)
-  - [Part 0: Node App](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#part-0-node-app)  
-  - [Part 1: Not automated Docker Container Network creation](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#----part-1-not-autmated-docker-container-network-creation)
+  - [Part 1: Node App](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#part-1-node-app)  
+  - [Part 2: Not automated Docker Container Network creation](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#part-2-not-autmated-docker-container-network-creation)
     - [1. Create a docker network for the containers to communicate.](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#1-create-a-docker-network-for-the-containers-to-communicate)
     - [2. Create the mongo container](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#2--create-the-mongo-container)
     - [3. Update the connection route we are using to connect to mongo](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#3-update-the-connection-route-we-are-using-to-connect-to-mongo)
     - [4. Create a custom image with our node app using Dockerfile](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#4-create-a-custom-image-with-our-node-app-using-dockerfile)
     - [5. Create a container with our node app image](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#5-create-a-container-with-our-node-app-image)
-  - [Part 2: Using Docker Compose](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#part-2-using-docker-compose)
-  - [Part 3: Dockerfile.dev](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#part-3-dockerfiledev)
+  - [Part 3: Using Docker Compose](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#part-3-using-docker-compose)
+  - [Part 4: Dockerfile.dev](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#part-4-dockerfiledev)
 
-## Part 0: Node App
+## Part 1: Node App
 
 On `index.js` you'll find it:
 - Uses express and mongoose. 
@@ -25,7 +25,7 @@ On `index.js` you'll find it:
 - Create 2 routes one get the animals one creates an animal
 - Starts the server.
 
-## Part 1: Not autmated Docker Container Network creation
+## Part 2: Not autmated Docker Container Network creation
 
 ### 1. Create a docker network for the containers to communicate.
 Creates the network
@@ -79,7 +79,7 @@ Starts the container:
 docker start myNodeApp
 ```
 
-## Part 2: Using Docker Compose
+## Part 3: Using Docker Compose
 
 - Create the docker-compose.yml file
 - A volume is configurated to persist mongo db data.
@@ -88,7 +88,7 @@ docker start myNodeApp
 docker compose up
 ```
 
-## Part 3: Dockerfile.dev
+## Part 4: Dockerfile.dev
 An extra pair of Dockerfile.dev and docker-compose-dev.yml are created to have a dev enviroment separated from the production one. 
 
 This enviroment can be executed with a variant of the `docker compose` command:
