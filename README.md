@@ -4,16 +4,16 @@ The goal of this app is to connect to a containerized MongoDB instance.
 
 # Table of Contents
 
-- [A Docker Playground: NodeApp + Mongodb](#a-docker-playground-nodeapp--mongodb)
-  - [Part 0: Node App](#part-0-node-app)
-  - [Part 1: Not automated Docker Container Network creation](#part-1-not-automated-docker-container-network-creation)
-    - [1. Create a docker network for the containers to communicate.](#1-create-a-docker-network-for-the-containers-to-communicate)
-    - [2. Create the mongo container](#2-create-the-mongo-container)
-    - [3. Update the connection route we are using to connect to mongo](#3-update-the-connection-route-we-are-using-to-connect-to-mongo)
-    - [4. Create a custom image with our node app using Dockerfile](#4-create-a-custom-image-with-our-node-app-using-dockerfile)
-    - [5. Create a container with our node app image](#5-create-a-container-with-our-node-app-image)
-  - [Part 2: Using Docker Compose](#part-2-using-docker-compose)
-  - [Part 3: Dockerfile.dev](#part-3-dockerfiledev)
+- [A Docker Playground: NodeApp + Mongodb](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#a-docker-playground-nodeapp--mongodb)
+  - [Part 0: Node App](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#part-0-node-app)  
+  - [Part 1: Not automated Docker Container Network creation](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#----part-1-not-autmated-docker-container-network-creation)
+    - [1. Create a docker network for the containers to communicate.](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#1-create-a-docker-network-for-the-containers-to-communicate)
+    - [2. Create the mongo container](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#2-create-the-mongo-container)
+    - [3. Update the connection route we are using to connect to mongo](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#3-update-the-connection-route-we-are-using-to-connect-to-mongo)
+    - [4. Create a custom image with our node app using Dockerfile](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#4-create-a-custom-image-with-our-node-app-using-dockerfile)
+    - [5. Create a container with our node app image](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#5-create-a-container-with-our-node-app-image)
+  - [Part 2: Using Docker Compose](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#part-2-using-docker-compose)
+  - [Part 3: Dockerfile.dev](https://github.com/davideperez/a-docker-playground?tab=readme-ov-file#part-3-dockerfiledev)
 
 ## Part 0: Node App
 
